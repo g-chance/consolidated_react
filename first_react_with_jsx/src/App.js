@@ -1,17 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import './assets/css/style.css'
+
 import HelloWorld from './components/HelloWorld';
 import PersonCard from './components/PersonCard2';
 import PersCardFun from './components/persCardFun';
 import HookForm from './components/HookForm';
 import BoxGenerator from './components/BoxGenerator'
 import BoxGen2 from './components/BoxGen2'
-import './assets/css/style.css'
+import Tabs from './components/Tabs'
+
 
 function App() {
   return (
     <div className="App">
+      <Tabs tabinfo={[
+        {'label': 'tab1', 'content': 'this is tab 1' },
+        {'label': 'tab2', 'content': 'this is tab 2' },
+        {'label': 'tab3', 'content': 'this is tab 3' },
+      ]} />
       <BoxGen2></BoxGen2>
       {/* <BoxGenerator></BoxGenerator> */}
       <HelloWorld />

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const StyledBox = styled.div`
-    display: inline-block;
+    display: block;
     border: 1px solid black;
-    width: ${props => props.height+'px' || '100px'};
-    height: ${props => props.height+'px' || '100px'};
+    width: ${props => props.height || '500px'};
+    height: ${props => props.height || '500px'};
     background-color:${props => props.bgColor}
 `;
 
