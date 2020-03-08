@@ -15,4 +15,14 @@ code {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.headerform {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: start;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid black;
 }
