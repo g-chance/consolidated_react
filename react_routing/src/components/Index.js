@@ -22,26 +22,26 @@ const Index = (props) => {
 
     const [count, setCount] = useState(1)
     
-    // useEffect(() => {
-    //     let i = 1;
-    //     // while(i < 10) {
-    //         axios.get(`https://swapi.co/api/people/?page=${count}`)
-    //         .then((response) => {
-    //             // count = response.data.count
-    //             console.log(response.data.results)
-    //             // console.log(response.data)
-    //             let people = [...response.data.results]
-    //             setData(
-    //                 {...data, 'people': [...data.people, ...people]}
-    //             )
-    //             setCount( count + 1 )
-    //             console.log(count)
-    //             console.log(data.people)
-    //         })
-    //         .catch((err) => console.log(err))
-    //         i += 1
-    //     // }
-    // }, [count])
+    useEffect(() => {
+        let i = 1;
+        // while(i < 10) {
+            axios.get(`https://swapi.co/api/people/?page=${count}`)
+            .then((response) => {
+                // count = response.data.count
+                console.log(response.data.results)
+                // console.log(response.data)
+                let people = [...response.data.results]
+                setData(
+                    {...data, 'people': [...data.people, ...people]}
+                )
+                setCount( count + 1 )
+                console.log(count)
+                console.log(data.people)
+            })
+            .catch((err) => console.log(err))
+            i += 1
+        // }
+    }, [count])
 
     const onChangeHandler = e => {
         let temp = {...form, [e.target.name]: e.target.value}
